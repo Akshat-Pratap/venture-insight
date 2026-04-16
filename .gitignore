@@ -1,0 +1,42 @@
+# Environment Variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+backend/.env
+
+# Python / Backend
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+.env/
+db.sqlite3
+backend/venture_insight.db
+*.db
+*.sqlite3
+
+# Node / Frontend
+node_modules/
+frontend/node_modules/
+frontend/build/
+frontend/dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDEs & Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+.project
+.settings/
+
+# Operating System
+.DS_Store
+Thumbs.db
+
