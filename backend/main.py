@@ -31,22 +31,16 @@ app = FastAPI(
 
 # ─── CORS Middleware ────────────────────────────────────────
 
-origins = [
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-    "https://venture-insight.vercel.app", # Your production frontend
-]
 
-# Add FRONTEND_URL from env if it exists, cleaning up whitespace/slashes
-frontend_url = os.getenv("FRONTEND_URL")
-if frontend_url:
-    cleaned_url = frontend_url.strip().rstrip("/")
-    if cleaned_url not in origins:
-        origins.append(cleaned_url)
+ 
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=[
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "https://venture-insight.vercel.app", # Your production frontend
+],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
